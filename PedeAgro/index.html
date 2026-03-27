@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PedeAgro - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="main-wrapper">
+        
+        <!-- Área Esquerda: Logotipo -->
+        <section class="logo-area" id="logo-container">
+            <!-- Insira aqui a sua imagem da logo -->
+            <img src="Captura de tela 2026-03-27 103114.png" alt="Logotipo PedeAgro">
+        </section>
+
+        <!-- Área Direita: Formulário de Login -->
+        <section class="form-container">
+            <header>
+                <p class="welcome-text">Bem vindo ao PedeAgro!</p>
+                <h1 class="login-title">Faça seu Login</h1>
+            </header>
+
+            <form onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <label class="label-text">Email</label>
+                    <input type="email" 
+                           placeholder="Insira seu email" 
+                           class="input-field" 
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label class="label-text">Senha</label>
+                    <input type="password" 
+                           placeholder="Insira sua senha" 
+                           class="input-field" 
+                           required>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Entrar
+                </button>
+
+                <p class="footer-text">
+                    Ainda não possui uma conta? 
+                    <a href="#" class="signup-link">Cadastre-se</a>
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>

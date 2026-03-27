@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PedeAgro - O seu agronegócio online</title>
+    
+    <!-- Scripts Externos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ligação ao Ficheiro CSS -->
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header-main">
+        <div class="container-custom h-full flex items-center justify-between gap-8">
+            <div class="flex-shrink-0">
+                <div class="w-12 h-12 agro-bg-green rounded-xl flex items-center justify-center">
+                    <i data-lucide="leaf" class="text-white w-7 h-7"></i>
+                </div>
+            </div>
+
+            <div class="flex-grow max-w-3xl relative">
+                <input type="text" placeholder="Pesquise por produto, serviço ou loja" class="search-input">
+                <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+            </div>
+
+            <nav class="flex items-center gap-6 text-sm font-semibold">
+                <div class="flex items-center gap-1 cursor-pointer">
+                    <i data-lucide="map-pin" class="w-5 h-5 agro-text-green"></i>
+                    <span>Local</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400"></i>
+                </div>
+                <div class="hidden lg:flex gap-6">
+                    <a href="#" class="hover:text-green-600">Categorias</a>
+                    <a href="#" class="hover:text-green-600">Meus pedidos</a>
+                    <a href="#" class="hover:text-green-600">Configurações</a>
+                </div>
+                <div class="flex gap-3">
+                    <button class="btn-base btn-outline">Cadastre-se</button>
+                    <button class="btn-base btn-primary">Fazer Login</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container-custom py-10">
+        
+        <!-- Secção: Itens em Alta -->
+        <section class="mb-14">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold">Itens em alta</h2>
+                <a href="#" class="text-sm font-bold text-gray-400 underline underline-offset-4">Ver todos</a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Template de Card de Produto -->
+                <script>
+                    const productCardTemplate = `
+                    <div class="flex flex-col">
+                        <div class="product-card-img">
+                            <!-- [Espaço para Imagem do Produto] -->
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-1 text-[11px] font-bold agro-text-green uppercase">
+                                <i data-lucide="map-pin" class="w-3 h-3"></i>
+                                <span class="truncate">Loja Vet São Miguel</span>
+                            </div>
+                            <h3 class="font-bold text-lg">Ração Bovina</h3>
+                            <p class="text-sm font-medium text-gray-500 mb-2">2.3km — <span class="text-slate-900 font-bold">R$ 85,00</span></p>
+                            <button class="w-full btn-base btn-primary py-2 text-xs flex items-center justify-center gap-2">
+                                <i data-lucide="log-in" class="w-4 h-4 rotate-180"></i> Compre agora
+                            </button>
+                        </div>
+                    </div>`;
+                    
+                    // Gera os itens em alta (exemplo com 6 itens conforme a imagem)
+                    for(let i=0; i<6; i++) document.write(productCardTemplate);
+                </script>
+            </div>
+        </section>
+
+        <!-- Secção: Serviços Próximos -->
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8 border-t pt-10">
+                <h2 class="text-2xl font-bold">Serviços próximos</h2>
+                <a href="#" class="text-sm font-bold text-gray-400 underline underline-offset-4">Ver todos</a>
+            </div>
+
+            <!-- Grade com 12 elementos (3 colunas no desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <script>
+                    const serviceCardTemplate = `
+                    <div class="service-card">
+                        <div class="service-thumb">
+                            <!-- [Espaço para Logo/Imagem do Serviço] -->
+                            <div class="text-center">
+                                <i data-lucide="store" class="w-10 h-10 text-pink-500 mx-auto mb-1 opacity-20"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow p-4 flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-green-700 text-lg leading-tight">Loja Vet São Miguel</h4>
+                                <p class="text-[11px] text-gray-500 font-bold mt-1">2.3km • 30 a 40 min • R$ 20,00</p>
+                            </div>
+                            <button class="w-full btn-base btn-primary py-1.5 text-[11px]">Compre agora</button>
+                        </div>
+                    </div>`;
+                    
+                    // Gera exatamente 12 elementos
+                    for(let i=0; i<12; i++) document.write(serviceCardTemplate);
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-white p-1 rounded-lg"><i data-lucide="leaf" class="agro-text-green w-8 h-8"></i></div>
+                        <span class="text-2xl font-bold italic">PedeAgro</span>
+                    </div>
+                    <p class="text-green-50 text-sm max-w-[240px]">PedeAgro! O jeito mais fácil de cuidar do seu negócio.</p>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-6">PedeAgro</h5>
+                    <ul class="space-y-3 text-green-50 text-sm">
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="md:mt-14">
+                    <ul class="space-y-3 text-green-50 text-sm">
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                        <li><a href="#">Ajuda</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold mb-6">Pague com</h5>
+                    <div class="payment-grid mb-8">
+                        <div class="payment-badge">4all</div>
+                        <div class="payment-badge">MC</div>
+                        <div class="payment-badge">VISA</div>
+                        <div class="payment-badge">ELO</div>
+                        <div class="payment-badge">AMEX</div>
+                        <div class="payment-badge">Hiper</div>
+                        <div class="payment-badge">MSR</div>
+                        <div class="payment-badge">pix</div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="font-bold text-xs">Siga-nos:</span>
+                        <div class="flex gap-4">
+                            <i data-lucide="instagram" class="w-6 h-6 cursor-pointer"></i>
+                            <i data-lucide="facebook" class="w-6 h-6 cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-text text-center">
+                PEDEAGRO LTDA | CNPJ: 52.525.252/0001-55
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inicialização dos Ícones -->
+    <script>lucide.createIcons();</script>
+</body>
+</html>

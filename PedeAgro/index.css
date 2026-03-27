@@ -1,0 +1,149 @@
+/* Importação da fonte Montserrat para manter a geometria da imagem original */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+:root {
+    --verde-fundo: #58a149;
+    --verde-botao: #b1d244;
+    --rosa-input: #fceef8;
+    --placeholder-cor: #c9b0c2;
+    --texto-input: #717171;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--verde-fundo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal */
+.main-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Área da Logo */
+.logo-area {
+    width: 100%;
+    max-width: 440px;
+}
+
+.logo-area img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Formulário e Títulos */
+.form-container {
+    width: 100%;
+    max-width: 440px;
+    color: white;
+}
+
+.welcome-text {
+    font-size: 2.1rem;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    margin-bottom: -12px; /* Espaçamento negativo para aproximar os títulos como na imagem */
+}
+
+.login-title {
+    font-size: 3.3rem;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label-text {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 400;
+}
+
+.input-field {
+    background-color: var(--rosa-input);
+    border: none;
+    outline: none;
+    color: var(--texto-input);
+    height: 52px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-field::placeholder {
+    color: var(--placeholder-cor);
+}
+
+/* Botão Entrar */
+.btn-submit {
+    background-color: var(--verde-botao);
+    height: 58px;
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: filter 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover {
+    filter: brightness(1.08);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* Rodapé */
+.footer-text {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.signup-link {
+    color: var(--verde-botao);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Mobile Responsividade */
+@media (max-width: 1024px) {
+    .main-wrapper {
+        flex-direction: column;
+        gap: 60px;
+        text-align: center;
+    }
+    .login-title {
+        font-size: 2.8rem;
+    }
+}
